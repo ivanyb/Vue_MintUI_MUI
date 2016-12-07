@@ -2,6 +2,7 @@
   <div>	
   	<mt-header fixed title="传智播客.黑马程序员Vue.js"></mt-header>
   	<div class="routerview">
+  		
   		<transition name="fade" mode="out-in">
   			<router-view></router-view>
   		</transition>
@@ -42,13 +43,15 @@ export default {
   	
   }
   ,
-  methods: {
-   
+  created (){
+  	//当app.vue创建完成以后，自动加载Home.vue模块
+		// window.location='/#/Home';
   }
 }
 </script>
 
 <style>
+  @import '../statics/css/muihead.css';
 body{
 	background-color:white;
 }
@@ -62,9 +65,10 @@ body{
 }
 
 .fade-enter-active, .fade-leave-active {
-  transition: opacity .5s
+  transition: opacity .2s
 }
 .fade-enter, .fade-leave-active {
   opacity: 0
 }
+
 </style>

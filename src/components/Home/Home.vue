@@ -20,13 +20,13 @@
 -->
 <ul class="mui-table-view mui-grid-view mui-grid-9">
         <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-        	<a href="#car">
+        	<a href="#news/imgcontentnews">
                 <span class="mui-icon mui-icon-home">
                 	
                 </span>
                 <div class="mui-media-body">新闻资讯</div></a></li>
         <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-        	<a href="#member">
+        	<a href="#car">
                 <span class="mui-icon mui-icon-email">
                 	<!--<span class="mui-badge">5</span>-->
                 </span>
@@ -58,15 +58,16 @@ import { Swipe, SwipeItem } from 'mint-ui';
 export default{
 	 data(){
 	 		return{
-	 			list:[]
+	 			list:[{url:'http://www.itcast.cn/subject/phoneweb/index.html',img:'http://ofv795nmp.bkt.clouddn.com/vuelogobanner1.jpg'},
+	 			{url:'http://www.itcast.cn/subject/phoneweb/index.html',img:'http://ofv795nmp.bkt.clouddn.com/vuelogobanner2-1.jpg'}]
 	 		}
 	 },
 	 created(){
-	 	this.$http.get('http://172.16.0.205:9090/api/getlunbo')
-//	 	this.$http.get('http://czdm.ittun.com/api/getlunbo')
-	 	.then((res)=>{
-	 		this.list = res.body;
-	 	});
+//	 	this.$http.get('http://172.16.0.205:9090/api/getlunbo')
+////	 	this.$http.get('http://czdm.ittun.com/api/getlunbo')
+//	 	.then((res)=>{
+//	 		this.list = res.body;
+//	 	});
 	 },
 	 components:{
 		Swipe,
