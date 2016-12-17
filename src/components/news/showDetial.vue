@@ -1,7 +1,7 @@
 <template>
     <div class="news">
     	<header class="mui-bar mui-bar-nav">
-			<a href="#/news/imgcontentnews" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left">返回</a>
+			<router-link to="/news/imgcontentnews" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left">返回</router-link>
 			<h1 class="mui-title">资讯详情</h1>
 		</header>
       <!--新闻详细-->

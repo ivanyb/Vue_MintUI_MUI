@@ -1,7 +1,7 @@
 <template>
   <div>	
-  	<mt-header fixed title="传智播客.黑马程序员Vue.js"></mt-header>
-  	<div class="routerview">
+  	<mt-header id="hd" fixed title="传智播客.黑马程序员Vue.js"></mt-header>
+  	<div id="content" class="routerview">
   		
   		<transition name="fade" mode="out-in">
   			<router-view></router-view>

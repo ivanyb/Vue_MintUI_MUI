@@ -1,12 +1,12 @@
 <template>
     <div class="news">
     	<header class="mui-bar mui-bar-nav">
-			<a href="#/Home" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left">返回</a>
+			<router-link to="/Home" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left">返回</router-link>
 			<h1 class="mui-title">图文资讯</h1>
 		</header>
    		<ul class="mui-table-view">
 			<li class="mui-table-view-cell mui-media" v-for="item in news">
-				<a  v-bind="{href:'#/news/showdetial/'+item.id}">
+				<router-link v-bind="{to:'/news/showdetial/'+item.id}">
 					<img class="mui-media-object mui-pull-left" :src="item.img_url">
 					<div class="mui-media-body">
 						{{item.title}}
@@ -16,7 +16,7 @@
 							<span>点击：{{item.click}}</span>
 						</p>
 					</div>
-				</a>
+				</router-link>
 			</li>
 		</ul>
     </div>
@@ -58,7 +58,7 @@ import common from 'kits/common.js'
   	color: #777777;
   }
   .mui-ellipsis{
-  	color:rgba(0,148,255,0.4);
+  	color:rgba(0,148,255,0.7);
   	
   }
 .mui-ellipsis > span{
@@ -69,4 +69,7 @@ import common from 'kits/common.js'
 	margin-bottom: 50px;
 }
    
+ .mui-table-view .mui-media-body[data-v-0ed3623a]{
+ 	color:#000000;
+ }
 </style>
